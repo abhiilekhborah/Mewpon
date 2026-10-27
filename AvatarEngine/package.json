@@ -1,0 +1,18 @@
+{
+  "name": "mewpon-avatar-engine",
+  "version": "1.1.0",
+  "description": "Mewpon \u2014 layered, interactive 2D desktop mascot engine for the Asyris assistant",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/mewpon.esm.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node tools/build.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

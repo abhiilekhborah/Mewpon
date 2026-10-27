@@ -1,0 +1,44 @@
+.build/
+build/
+.DS_Store
+AvatarEngine/node_modules/
+AvatarEngine/dist/
+
+# Downloaded local model weights and third-party binary distributions
+LocalModels/
+ThirdParty/
+
+# Generated verification captures, audio, exports, and local run logs
+Verification/**/*.png
+Verification/**/*.jpg
+Verification/**/*.jpeg
+Verification/**/*.gif
+Verification/**/*.wav
+Verification/**/*.caf
+Verification/**/*.mp4
+Verification/**/*.pdf
+Verification/**/*.log
+Verification/Phase4/process-snapshot.json
+
+# Local credentials, signing material, and editor state
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+.swiftpm/
+xcuserdata/
+
+# Machine-specific process inventories
+Verification/**/process-snapshot.*
+
+# Keep raw local diagnostics and personal implementation exports private.
+Verification/**
+!Verification/Phase7/
+!Verification/Phase7/model-provenance.json
+!Verification/Phase7/hindi-model-provenance.json
+!Verification/Phase7/diarization-provenance.json
+!Verification/Phase7/embedding-upstream-readme.md
+Docs/*.docx

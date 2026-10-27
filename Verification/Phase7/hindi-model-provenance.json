@@ -1,0 +1,9 @@
+{
+  "publisher": "ggerganov/whisper.cpp",
+  "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+  "file": "ggml-small.bin",
+  "bytes": 487601967,
+  "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+  "license": "MIT",
+  "purpose": "Offline Hindi quality comparison; only selected after actual fixture verification"
+}

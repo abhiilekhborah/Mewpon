@@ -1,0 +1,14 @@
+# Phase 6 theme research — 25 October 2026
+
+GitHub and web searches were performed before implementing themes. Repository metadata, LICENSE files and Package.swift were fetched from each upstream repository; the raw evidence is in [theme-research.json](Verification/Phase6/theme-research.json). No third-party theme source was copied or added as a dependency.
+
+| Candidate | License / maintenance observed | Compatibility and footprint | Decision |
+|---|---|---|---|
+| [SohrabZ/swiftui-macos-app](https://github.com/SohrabZ/swiftui-macos-app) | MIT; not archived; last push 2026-07-21 | Swift 6, macOS 15; full application template with Sparkle | Useful reference for semantic theme stores, adaptive appearances and previews. Reject direct integration: replacing the app shell and adding an updater would disrupt existing behavior and macOS 14 support. |
+| [gabriarceus/MenuBarKit](https://github.com/gabriarceus/MenuBarKit) | MIT; not archived; last push 2026-10-23 | Swift 6.2, macOS 26; native glass panels and design tokens | Useful small native design-system reference. Reject direct integration: deployment floor and documented click-away dismissal conflict with Mewpon's supported systems and explicit hide/show behavior. |
+| [adamtheturtle/CommandPaletteKit](https://github.com/adamtheturtle/CommandPaletteKit) | MIT; not archived; last push 2026-10-12 | Swift 6, macOS 14; dependency-free runtime, DocC package for documentation | Deployment-compatible and actively updated. Reject replacing the working palette: its keyboard/focus and command model would duplicate Mewpon's custom native multiline editor, file results and streaming UI. |
+| [metneo/LiquidGlass](https://github.com/metneo/LiquidGlass) | MIT; not archived; last push 2026-09-14 | Swift 6.3, macOS 12 fallback; native platform-26 glass wrapper | Useful compatibility-wrapper reference. Reject dependency: Mewpon already has availability-guarded native glass plus Reduce Transparency/contrast handling; another wrapper adds no needed runtime capability. |
+
+All four license files identify MIT, a permissive license suitable for reuse with its required notices; none is incorporated, so no upstream source attribution bundle is required for these references. Native Swift/AppKit code supports Apple Silicon. Maintenance dates are observations, not guarantees. Accessibility and performance were assessed from documented features and dependency/deployment structure, not independent audits of those projects.
+
+Decision: retain the existing palette, focus code, glass fallback, and avatar renderer. Add a small first-party semantic token engine, live observable theme store, six previews and strict local JSON imports. This avoids rebuilding Mewpon, adds no runtime dependencies or network access, and leaves accessibility behavior under the existing app's control. Native glass remains exclusive to Liquid Glass; the other five use opaque, legible surfaces.

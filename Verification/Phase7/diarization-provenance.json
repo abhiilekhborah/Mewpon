@@ -1,0 +1,23 @@
+{
+  "runtime_version": "sherpa-onnx 2.0.0 / ONNX Runtime 1.28.2",
+  "runtime_release": "https://github.com/k2-fsa/sherpa-onnx/releases/tag/v2.0.0",
+  "runtime_archive_sha256": "1b1626b7e2f0873bac0e7d9f81e136547eee506d25f6d36548c9d2e93424d985",
+  "runtime_hash_verification": "Matched GitHub publisher release asset digest",
+  "models": [
+    {
+      "file": "embedding.onnx",
+      "bytes": 39593761,
+      "sha256": "1a331345f04805badbb495c775a6ddffcdd1a732567d5ec8b3d5749e3c7a5e4b",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/3dspeaker_speech_eres2net_base_sv_zh-cn_3dspeaker_16k.onnx",
+      "license": "Apache-2.0 (upstream ModelScope card verified)"
+    },
+    {
+      "file": "model.int8.onnx",
+      "bytes": 1540506,
+      "sha256": "d582f4b4c6b48205de7e0643c57df0df5615a3c176189be3fc461e9d18827b5d",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-segmentation-models/sherpa-onnx-pyannote-segmentation-3-0.tar.bz2",
+      "license": "MIT (CNRS license included in archive)"
+    }
+  ],
+  "limitations": "Model release assets have no publisher digest; SHA256 recorded after HTTPS download from official k2-fsa release. Exact original conversion revision is not stated; no revision is invented."
+}
